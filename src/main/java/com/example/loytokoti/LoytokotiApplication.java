@@ -45,7 +45,8 @@ public class LoytokotiApplication {
 			arepository.save(new Animal("Excelsa", 5,
 					"Kurrnau... tai miten nyt tykkääkin sanoa. Olen tällainen ikkunaprinsessa. Pidän siitä, että saan katsella maailman menoa ikkunalasin takaa.",
 					"male", srepository.findBySpeciesName("Kissa").get(0)));
-			arepository.save(new Animal("Mythos", 3, "Miau! Täällä kuikuilee mystinen kissaherra Mythos. Haluaisitko tutustua hieman salaperäiseen sielunelämääni?", "female", srepository.findBySpeciesName("Kissa").get(0)));
+			arepository.save(new Animal(
+					"Mythos", 3, "Miau! Täällä kuikuilee mystinen kissaherra Mythos. Haluaisitko tutustua hieman salaperäiseen sielunelämääni?", "female", srepository.findBySpeciesName("Kissa").get(0)));
 			arepository.save(new Animal("Pepsi", 12, "Huima, persoonallinen hömelö – se on kaikesta niin innoissaan, että hiki tulee jo sen olemusta katsellessa. Huima haluaa osallistua kaikkeen, mitä sen ympärillä tapahtuu", "male", srepository.findBySpeciesName("Koira").get(0)));
 			arepository
 					.save(new Animal("Perry", 5, "Pidetään hiljaisena ja mitään tekemättömänä. Hän elää kuitenkin kaksoiselämää salaisena agenttina.", "male", srepository.findBySpeciesName("Nokkaeläin").get(0)));

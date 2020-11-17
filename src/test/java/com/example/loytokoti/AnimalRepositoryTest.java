@@ -20,20 +20,22 @@ public class AnimalRepositoryTest {
 
 	@Autowired
 	private AnimalRepository arepository;
-	
+
 	@Test
 	public void findByNameShouldReturnAnimal() {
 		List<Animal> animal = arepository.findByName("Mythos");
-		
+
 		assertThat(animal).hasSize(1);
 		assertThat(animal.get(0).getName()).isEqualTo("Mythos");
 	}
+
 	@Test
 	public void createNewAnimal() {
 		Animal animal = new Animal("moi", 2, "moi", "male", new Species("Moi"));
 		arepository.save(animal);
 		assertThat(animal.getId()).isNotNull();
 	}
+
 	@Test
 	public void deleteAnimal() {
 		Animal animal = new Animal("moi", 2, "moi", "male", new Species("Moi"));
